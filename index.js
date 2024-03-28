@@ -26,6 +26,10 @@ async function main() {
     client.on('ready', () => {
         console.log(`Logged in as ${client.user.tag}!`);
         console.log(new Date())
+    client.user.setActivity({
+        name: `3 Options only: /ask && /images && /remix!`,
+        type: ActivityType.Playing,
+        })
     });
 
     client.on("messageCreate", async message => {
